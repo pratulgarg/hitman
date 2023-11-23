@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "hitman_backend": {
+      "main": "src/hitman_backend/main.mo",
+      "type": "motoko"
+    },
+    "hitman_frontend": {
+      "dependencies": [
+        "hitman_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/hitman_frontend/src/index.html"
+      },
+      "source": [
+        "src/hitman_frontend/assets",
+        "dist/hitman_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
